@@ -167,11 +167,11 @@ server <- function(input, output, session) {
     }
 
     ggplotly(p, tooltip = 'text') %>%
-      add_annotations(text = comp_label, xref = "paper", yref="paper",
+      add_annotations(text = comp_label, xref = "paper", yref = "paper",
                       x = 1.02, xanchor = "left",
                       y = 0.8, yanchor = "bottom",
-                      legendtitle=TRUE, showarrow=FALSE) %>%
-      layout(legend = list(y=0.8, yanchor="top"))
+                      legendtitle = TRUE, showarrow = FALSE) %>%
+      layout(legend = list(y = 0.8, yanchor = "top"))
   })
 
   output$choice_prompt <- renderUI({
