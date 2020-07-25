@@ -50,7 +50,7 @@ league_tables <- map_dfr(league_table_urls, download_csv, .id = 'Course')
 
 # Clean up dataframe
 league_tables$Course <- factor(league_tables$Course)
-league_tables$Institution <- factor(league_tables$institution)
+league_tables$Institution <- factor(league_tables$Institution)
 names(league_tables) <- names(league_tables) %>%
   str_replace_all(' ', '_') %>%
   tolower()
