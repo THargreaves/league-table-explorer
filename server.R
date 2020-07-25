@@ -44,7 +44,7 @@ server <- function(input, output, session) {
         filter(course == input$course)
     } else if (input$comparison_type == "Courses") {
       req(input$university)
-      eague_table %>%
+      league_table() %>%
         filter(institution == input$university)
     }
   })
